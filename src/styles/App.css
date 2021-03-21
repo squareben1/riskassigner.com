@@ -1,0 +1,60 @@
+$breakpoint-tablet: 767px;
+$breakpoint-desktop: 1192px;
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.btn {
+  color: black;
+}
+
+.h3 {
+  margin: auto;
+}
+
+.playerInput {
+  width: 100%;
+}
+
+.playerInputContainer {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  width: 80%;
+  margin: auto;
+}
+
+.inputContainer {
+  flex: 2;
+  color: white;
+  border: white 2px solid;
+  width: 500px;
+  height: 150px;
+  display:flex;
+}
+
+.goContainer {
+  flex: 1;
+  border: white 2px solid;
+  width: 250px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
