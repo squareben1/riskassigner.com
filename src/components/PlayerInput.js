@@ -1,26 +1,42 @@
-import React from "react";
+import { getElementError } from "@testing-library/dom";
+import React, { Component } from "react";
 
-const PlayerInput = () => {
+class PlayerInput extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      playerNumber: 2,
+    };
+  }
+  onNumberChange(event) {
+    this.setState({ playerNumber: event.target.value });
+  }
+
+  render() {
     return (
       <>
         <section className="playerInput">
-            <div className="playerInputContainer">
-                <div className="inputContainer">
-                    <div className="playerInfo">
-                        <h3>Players:</h3>
-                        <div className="numberOfPlayers">2</div>
-                    </div>
-                </div>
-                <div className="goContainer">
-                    <button class="btn assign">
-                    <h3>Assign</h3>
-                    </button>
-                </div>
-            </div>
+          <div className="playerInputContainer">
+            <form className="player-form">
+              <label for="num_players">Players:</label>
+              <input
+                type="number"
+                name="num_players"
+                id="num_players"
+                placeholder="2"
+                min="2"
+                max="6"
+                onChange={this.onNumberChange.bind(this)}
+              />
+              <button type="submit" className="btn assign">
+                Assign
+              </button>
+            </form>
+          </div>
         </section>
       </>
     );
-  };
-  
-  export default PlayerInput;
-  
+  }
+}
+
+export default PlayerInput;
