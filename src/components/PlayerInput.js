@@ -11,10 +11,10 @@ const PlayerInput = (props) => {
               type="number"
               name="num_players"
               id="num_players"
-              placeholder="2"
               min="2"
               max="6"
-              onChange={() => props.numberChangeHandler.bind(this)}
+              onChange={props.numberChangeHandler}
+              value={props.playerNumber}
             />
             <button type="submit" className="btn assign">
               Assign
@@ -24,7 +24,6 @@ const PlayerInput = (props) => {
       </section>
     </>
   );
-  // }
 };
 
 export default PlayerInput;
