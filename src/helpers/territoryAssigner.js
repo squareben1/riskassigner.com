@@ -1,6 +1,5 @@
 const shuffler = (array) => {
-  let x = shuffle(array);
-  return x
+  return
 };
 
 module.exports = shuffler
