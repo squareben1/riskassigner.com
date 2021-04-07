@@ -1,6 +1,6 @@
 import shuffle from "../territoryAssigner";
 
-const array = [
+const territoryArray = [
   "Kamchatka",
   "Japan",
   "Eastern Australia",
@@ -9,8 +9,8 @@ const array = [
   "Iceland",
 ];
 describe("#shuffle", () => {
-  it("Shuffle: returns shuffled array", () => {
-    expect(shuffle(array)).not.toEqual(array);
+  it("Shuffle: returns shuffled territoryArray", () => {
+    expect(shuffle(territoryArray)).not.toEqual(territoryArray);
   });
 
   const count = {
@@ -30,7 +30,7 @@ describe("#shuffle", () => {
 
     for (let key in count) {
       const diff = count[key] - 160000;
-      expect(diff).toBeGreaterThan(6000);
+      expect(diff).toBeGreaterThan(5500);
       expect(diff).toBeLessThan(8000);
     }
   });
