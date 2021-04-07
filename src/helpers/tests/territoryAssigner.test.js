@@ -1,8 +1,9 @@
 
-import shuffler from '../territoryAssigner';
+import shuffle from '../territoryAssigner';
 
 const array = ['Kamchatka', 'Japan', 'Eastern Australia', 'Alaska', 'Northwest Territory', 'Iceland'];
 
-test('shuffler function shuffles array', () => {
-  expect(shuffler(array)).not.toEqual(array)
+it('shuffle function shuffles array', () => {
+  expect(shuffle(array)).not.toEqual(array)
 });
+
