@@ -22,16 +22,17 @@ describe("#shuffle", () => {
     312: 0,
   };
   it("Shuffle: all permuattions have roughly same probability", () => {
-    for (let i = 0; i < 1000000; i++) {
+    for (let i = 0; i < 100000; i++) {
       let array = [1, 2, 3];
-      const arr = shuffle(array);
+      let arr = shuffle(array);
       count[arr.join("")]++;
     }
-
+    
+    console.log(count)
     for (let key in count) {
-      const diff = count[key] - 160000;
-      expect(diff).toBeGreaterThan(5500);
-      expect(diff).toBeLessThan(8000);
+      const diff = count[key] - 16000;
+      expect(diff).toBeGreaterThan(300);
+      expect(diff).toBeLessThan(1000);
     }
   });
 });
