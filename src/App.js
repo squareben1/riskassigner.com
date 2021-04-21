@@ -24,7 +24,7 @@ class App extends Component {
           />
           Number of Players: {this.state.playerNumber}
         </header>
-        <TerritoryLists />
+        <TerritoryLists playerNumber={this.state.playerNumber} />
       </div>
     );
   }
