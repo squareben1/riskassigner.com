@@ -9,9 +9,16 @@ const shuffle = (array) => {
   return arr;
 };
 
-const createLists = (array, number) => {
-  let returnArr = [[array[0]], [array[1]]];
-  return returnArr;
+const chunkArray = (arr, players) => {
+  const chunks = [];
+  while (arr.length) {
+    const chunkSize = Math.ceil(arr.length / players--);
+    const chunk = arr.slice(0, chunkSize);
+    chunks.push(chunk);
+    arr = arr.slice(chunkSize);
+  }
+  console.log("ONE", chunks);
+  return chunks;
 };
 
-module.exports = { shuffle, createLists };
+module.exports = { shuffle, chunkArray };

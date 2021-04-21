@@ -1,5 +1,5 @@
 import React from "react";
-import { shuffle } from "../../helpers/territoryAssigner";
+import { shuffle, chunkArray } from "../../helpers/territoryAssigner";
 import territoriesArray from "../../helpers/territoriesArray";
 
 const territoryLists = () => {

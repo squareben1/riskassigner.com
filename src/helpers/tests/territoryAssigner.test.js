@@ -1,4 +1,4 @@
-import { shuffle, createLists } from "../territoryAssigner";
+import { shuffle, chunkArray } from "../territoryAssigner";
 
 const territoryArray = [
   "Kamchatka",
@@ -37,11 +37,33 @@ describe("#shuffle", () => {
   });
 });
 
-describe("#createLists", () => {
+describe("#chunkArray", () => {
   it("returns 2 arrays when passed 2", () => {
     let arr = ["Kamchatka", "Japan"];
-    let received = createLists(arr, 2);
+    let received = chunkArray(arr, 2);
     expect(received[0].length).toEqual(1);
     expect(received[1].length).toEqual(1);
+  });
+  it("returns 2 arrays when passed 2", () => {
+    let received = chunkArray(territoryArray, 2);
+    let arr1 = ["Kamchatka", "Japan", "Eastern Australia"];
+    let arr2 = ["Alaska", "Northwest Territory", "Iceland"];
+    expect(received[0].length).toEqual(3);
+    expect(received[1].length).toEqual(3);
+    expect(received[0]).toEqual(arr1);
+    expect(received[1]).toEqual(arr2);
+  });
+  it("returns 2 arrays when passed 2", () => {
+    const unevenTerritoryArray = [
+      "Kamchatka",
+      "Japan",
+      "Eastern Australia",
+      "Alaska",
+      "Northwest Territory",
+    ];
+    let received = chunkArray(unevenTerritoryArray, 2);
+
+    expect(received[0].length).toEqual(3);
+    expect(received[1].length).toEqual(2);
   });
 });
