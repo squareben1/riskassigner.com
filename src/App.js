@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./styles/App.css";
 import Header from "./components/Header";
 import PlayerInput from "./components/PlayerInput";
+import TerritoryLists from "./components/TerritoryLists/TerritoryLists";
 
 class App extends Component {
   state = {
@@ -23,6 +24,7 @@ class App extends Component {
           />
           Number of Players: {this.state.playerNumber}
         </header>
+        <TerritoryLists />
       </div>
     );
   }

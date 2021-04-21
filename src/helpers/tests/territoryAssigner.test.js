@@ -27,8 +27,8 @@ describe("#shuffle", () => {
       let arr = shuffle(array);
       count[arr.join("")]++;
     }
-    
-    console.log(count)
+
+    console.log(count);
     for (let key in count) {
       const diff = count[key] - 16000;
       expect(diff).toBeGreaterThan(300);
@@ -36,3 +36,5 @@ describe("#shuffle", () => {
     }
   });
 });
+
+describe("#");

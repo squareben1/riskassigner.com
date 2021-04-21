@@ -1,5 +1,5 @@
 const shuffle = (array) => {
-  let arr = array.slice();
+  let arr = [...array];
 
   for (let i = arr.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
@@ -9,4 +9,8 @@ const shuffle = (array) => {
   return arr;
 };
 
-module.exports = shuffle;
+const createLists = (array, number) => {
+  return number;
+};
+
+module.exports = { shuffle, createLists };
