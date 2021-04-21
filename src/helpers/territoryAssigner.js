@@ -10,7 +10,8 @@ const shuffle = (array) => {
 };
 
 const createLists = (array, number) => {
-  return number;
+  let returnArr = [[array[0]], [array[1]]];
+  return returnArr;
 };
 
 module.exports = { shuffle, createLists };

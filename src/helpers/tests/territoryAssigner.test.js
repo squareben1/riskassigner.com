@@ -1,4 +1,4 @@
-import shuffle from "../territoryAssigner";
+import { shuffle, createLists } from "../territoryAssigner";
 
 const territoryArray = [
   "Kamchatka",
@@ -8,6 +8,7 @@ const territoryArray = [
   "Northwest Territory",
   "Iceland",
 ];
+
 describe("#shuffle", () => {
   it("Shuffle: returns shuffled territoryArray", () => {
     expect(shuffle(territoryArray)).not.toEqual(territoryArray);
@@ -28,7 +29,6 @@ describe("#shuffle", () => {
       count[arr.join("")]++;
     }
 
-    console.log(count);
     for (let key in count) {
       const diff = count[key] - 16000;
       expect(diff).toBeGreaterThan(300);
@@ -37,4 +37,11 @@ describe("#shuffle", () => {
   });
 });
 
-describe("#");
+describe("#createLists", () => {
+  it("returns 2 arrays when passed 2", () => {
+    let arr = ["Kamchatka", "Japan"];
+    let received = createLists(arr, 2);
+    expect(received[0].length).toEqual(1);
+    expect(received[1].length).toEqual(1);
+  });
+});
