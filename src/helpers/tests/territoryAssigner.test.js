@@ -1,4 +1,5 @@
 import { shuffle, chunkArray } from "../territoryAssigner";
+import territoriesArray from "../territoriesArray";
 
 const territoryArray = [
   "Kamchatka",
@@ -65,5 +66,19 @@ describe("#chunkArray", () => {
 
     expect(received[0].length).toEqual(3);
     expect(received[1].length).toEqual(2);
+  });
+
+  it("chunks entire list with full 6 players", () => {
+    let received = chunkArray(territoriesArray, 6);
+    expect(received[0].length).toEqual(7);
+  });
+
+  it("chunks entire list with 5 players, 1st 2 players get 1 more", () => {
+    let received = chunkArray(territoriesArray, 5);
+    expect(received[0].length).toEqual(9);
+    expect(received[1].length).toEqual(9);
+    expect(received[2].length).toEqual(8);
+    expect(received[3].length).toEqual(8);
+    expect(received[4].length).toEqual(8);
   });
 });

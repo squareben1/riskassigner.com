@@ -4,6 +4,7 @@ import territoriesArray from "../../helpers/territoriesArray";
 
 const territoryLists = () => {
   const shuffledArray = shuffle(territoriesArray);
+  const chunkedArray = chunkArray(shuffledArray);
 
   return (
     <div>

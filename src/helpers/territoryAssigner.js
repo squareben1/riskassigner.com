@@ -17,7 +17,7 @@ const chunkArray = (arr, players) => {
     chunks.push(chunk);
     arr = arr.slice(chunkSize);
   }
-  console.log("ONE", chunks);
+
   return chunks;
 };
 
