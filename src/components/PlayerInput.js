@@ -16,7 +16,11 @@ const PlayerInput = (props) => {
               onChange={props.numberChangeHandler}
               value={props.playerNumber}
             />
-            <button type="submit" className="btn assign">
+            <button
+              type="button"
+              className="btn assign"
+              onClick={props.showListsHandler}
+            >
               Assign
             </button>
           </form>
