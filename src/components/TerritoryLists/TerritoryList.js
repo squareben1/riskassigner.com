@@ -3,8 +3,8 @@ import React from "react";
 import classes from "./TerritoryList.module.css";
 
 const TerritoryList = (props) => {
-  const territories = props.list.map((territory) => {
-    return <li>{territory}</li>;
+  const territories = props.list.map((territory, i) => {
+    return <li key={i}>{territory}</li>;
   });
 
   return (

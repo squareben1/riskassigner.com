@@ -13,8 +13,6 @@ const TerritoryLists = (props) => {
     return <TerritoryList key={i} list={chunk} number={i + 1} />;
   });
 
-  console.log("lists", lists);
-
   return <div className={classes.listsContainer}>{lists}</div>;
 };
 
