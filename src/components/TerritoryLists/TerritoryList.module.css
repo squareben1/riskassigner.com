@@ -1,0 +1,11 @@
+.list {
+    background-color: gray;
+    width: 20%;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.list li {
+    padding: 2px;
+}
