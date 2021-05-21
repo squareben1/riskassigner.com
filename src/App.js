@@ -34,7 +34,6 @@ class App extends Component {
             numberChangeHandler={this.numberChangeHandler.bind(this)}
             showListsHandler={this.listsHandler.bind(this)}
           />
-          Number of Players: {this.state.playerNumber}
         </header>
         {this.state.showLists && this.state.territories}
       </div>
