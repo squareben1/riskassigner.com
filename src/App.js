@@ -11,11 +11,13 @@ class App extends Component {
   };
 
   numberChangeHandler(event) {
-    this.setState({ playerNumber: event.target.value });
+    this.setState({
+      playerNumber: event.target.value,
+    });
   }
 
   showListsHandler() {
-    this.setState({ showLists: !this.state.showLists });
+    this.setState({ showLists: true });
   }
 
   render() {
