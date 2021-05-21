@@ -1,6 +1,20 @@
 .listsContainer {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  float: left;
+}
+
+.listsContainer:first-child:nth-last-child(n + 4),
+.listsContainer:first-child:nth-last-child(n + 4) ~ .listsContainer {
+    padding: 20rem;
+}
+
+/* .listsContainer {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-}
+} */

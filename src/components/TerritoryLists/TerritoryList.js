@@ -10,7 +10,7 @@ const TerritoryList = (props) => {
   return (
     <div className={classes.list}>
       <h2>Player {props.number}</h2>
-      <ul>{territories}</ul>
+      <ol>{territories}</ol>
     </div>
   );
 };
