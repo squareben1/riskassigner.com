@@ -8,6 +8,7 @@ class App extends Component {
   state = {
     playerNumber: 2,
     showLists: false,
+    territories: null,
   };
 
   numberChangeHandler(event) {
@@ -16,8 +17,11 @@ class App extends Component {
     });
   }
 
-  showListsHandler() {
-    this.setState({ showLists: true });
+  listsHandler() {
+    this.setState({
+      showLists: true,
+      territories: <TerritoryLists playerNumber={this.state.playerNumber} />,
+    });
   }
 
   render() {
@@ -28,13 +32,11 @@ class App extends Component {
           <PlayerInput
             playerNumber={this.state.playerNumber}
             numberChangeHandler={this.numberChangeHandler.bind(this)}
-            showListsHandler={this.showListsHandler.bind(this)}
+            showListsHandler={this.listsHandler.bind(this)}
           />
           Number of Players: {this.state.playerNumber}
         </header>
-        {this.state.showLists && (
-          <TerritoryLists playerNumber={this.state.playerNumber} />
-        )}
+        {this.state.showLists && this.state.territories}
       </div>
     );
   }
