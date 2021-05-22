@@ -1,6 +1,6 @@
 .list {
     background-color: gray;
-    width: 20rem;
+    width: 16rem;
     /* height: 20rem; */
     margin: 1rem;
     flex-shrink: 0;
@@ -9,13 +9,66 @@
     border-radius: 5px;
 }
 
+h2 {
+    margin-top: 0.5rem;
+}
+
 .list:first-child:nth-last-child(n + 4),
 .list:first-child:nth-last-child(n + 4) ~ .list {
     height: 22rem;
 }
 
-.list:first-child:nth-last-child(n + 5),
-.list:first-child:nth-last-child(n + 5) ~ .list {
+@media (min-width: 50rem) {
+    .list:first-child:nth-last-child(n + 4),
+    .list:first-child:nth-last-child(n + 4) ~ .list {
+    margin: 1rem 7%;
+    }
+}
+    
+@media (min-width: 72rem) {
+    .list:first-child:nth-last-child(n + 4),
+    .list:first-child:nth-last-child(n + 4) ~ .list {
+    margin: 1rem;
+  }
+}
+
+@media (min-width: 54rem) {
+    .list:first-child:nth-last-child(n + 5),
+    .list:first-child:nth-last-child(n + 5) ~ .list {
+    margin: 1rem 0.5rem;
+    }
+}
+    
+@media (min-width: 68rem) {
+    .list:first-child:nth-last-child(n + 5),
+    .list:first-child:nth-last-child(n + 5) ~ .list {
+    margin: 1rem 4%;
+  }
+}
+
+@media (min-width: 90rem) {
+    .list:first-child:nth-last-child(n + 5),
+    .list:first-child:nth-last-child(n + 5) ~ .list {
+    margin: 1rem;
+  }
+}
+
+@media (min-width: 90rem) {
+    .list:first-child:nth-last-child(n + 6),
+    .list:first-child:nth-last-child(n + 6) ~ .list {
+    margin: 1rem 5%;
+  }
+}
+
+@media (min-width: 109rem) {
+    .list:first-child:nth-last-child(n + 6),
+    .list:first-child:nth-last-child(n + 6) ~ .list {
+    margin: 1rem;
+  }
+}
+
+.list:first-child:nth-last-child(n + 6),
+.list:first-child:nth-last-child(n + 6) ~ .list {
     height: 20rem;
 }
 

@@ -4,12 +4,7 @@
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  float: left;
-}
-
-.listsContainer:first-child:nth-last-child(n + 4),
-.listsContainer:first-child:nth-last-child(n + 4) ~ .listsContainer {
-    padding: 20rem;
+  /* float: left; */
 }
 
 /* .listsContainer {
