@@ -7,16 +7,12 @@ import TerritoryLists from "./components/TerritoryLists/TerritoryLists";
 import useShuffle from "./hooks/use-shuffle";
 
 function App() {
-  const [playerNumber, setPlayerNumber] = useState(2);
   const [showLists, setShowLists] = useState(false);
-  const [chunkedTerritories, setChunkedTerritories] = useState([]);
 
-  const { shuffle } = useShuffle(territoriesArray);
+  const { shuffledArray, shuffle } = useShuffle(territoriesArray);
 
   const listsHandler = (players) => {
-    setPlayerNumber(players);
-    const chunks = shuffle(players);
-    setChunkedTerritories(chunks);
+    shuffle(players);
     setShowLists(true);
   };
 
@@ -26,7 +22,7 @@ function App() {
         <Header />
         <PlayerInput showListsHandler={listsHandler} />
       </header>
-      {showLists && <TerritoryLists chunks={chunkedTerritories} />}
+      {showLists && <TerritoryLists chunks={shuffledArray} />}
     </div>
   );
 }
