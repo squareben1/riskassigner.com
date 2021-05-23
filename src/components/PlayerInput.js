@@ -1,10 +1,12 @@
-import React from "react";
+import { useState, useRef } from "react";
 
 const PlayerInput = (props) => {
   const onSubmitHandler = (event) => {
     event.preventDefault();
-    props.showListsHandler();
+    props.showListsHandler(inputRef.current.value);
   };
+
+  const inputRef = useRef();
 
   return (
     <>
@@ -16,10 +18,11 @@ const PlayerInput = (props) => {
               type="number"
               name="num_players"
               id="num_players"
+              defaultValue="2"
               min="2"
               max="6"
-              onChange={props.numberChangeHandler}
-              value={props.playerNumber}
+              ref={inputRef}
+              // onChange={props.numberChangeHandler}
             />
             <button type="submit" className="btn assign">
               Assign
