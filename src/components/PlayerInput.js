@@ -22,7 +22,6 @@ const PlayerInput = (props) => {
               min="2"
               max="6"
               ref={inputRef}
-              // onChange={props.numberChangeHandler}
             />
             <button type="submit" className="btn assign">
               Assign
