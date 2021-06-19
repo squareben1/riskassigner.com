@@ -26,17 +26,16 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="Background">
+        <main className="App-main">
           <Header />
           <PlayerInput
             playerNumber={this.state.playerNumber}
             numberChangeHandler={this.numberChangeHandler.bind(this)}
             showListsHandler={this.listsHandler.bind(this)}
           />
-          Number of Players: {this.state.playerNumber}
-        </header>
-        {this.state.showLists && this.state.territories}
+          {this.state.showLists && this.state.territories}
+        </main>
       </div>
     );
   }

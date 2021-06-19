@@ -1,6 +1,15 @@
 .listsContainer {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  /* float: left; */
+}
+
+/* .listsContainer {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-}
+} */
